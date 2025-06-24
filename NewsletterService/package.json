@@ -1,0 +1,31 @@
+{
+  "name": "newsletterservice",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "dev": "concurrently \"tsc -w\" \"nodemon dist/server.js\""
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@types/concurrently": "^6.4.0",
+    "@types/dotenv": "^6.1.1",
+    "@types/express": "^5.0.3",
+    "@types/nodemailer": "^6.4.17",
+    "@types/nodemon": "^1.19.6",
+    "@types/websocket": "^1.0.10",
+    "@types/ws": "^8.18.1",
+    "concurrently": "^9.2.0",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "nodemailer": "^7.0.3",
+    "nodemon": "^3.1.10",
+    "typescript": "^5.8.3",
+    "websocket": "^1.0.35",
+    "ws": "^8.18.2"
+  }
+}
