@@ -8,6 +8,7 @@ app.use(passport.initialize());
 app.use('/auth', authRouter);
 (async () => {
     await sequelize.sync({ alter: true }); // Create tables if not exist
-    const PORT = process.env.PORT || 4000;
+    const PORT = process.env.PORT || 5000;
+    ;
     app.listen(PORT, () => console.log(`✅ Auth service running on port ${PORT}`));
 })();

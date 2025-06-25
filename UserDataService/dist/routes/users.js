@@ -2,6 +2,7 @@ import express from 'express';
 import * as ctl from '../controller/userController.js';
 import authen from '../middleware/jwtauth.js';
 const router = express.Router();
+router.post('/users', ctl.addUser);
 // Cast authentication middleware to RequestHandler
 router.use(authen);
 // Cast controller functions to RequestHandler

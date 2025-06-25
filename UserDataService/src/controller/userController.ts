@@ -185,3 +185,22 @@ export const removeWatchlistItem = async (req: Request, res: Response) => {
     }
 };
 
+export const addUser = async (req: Request, res: Response) => {
+    const {name, email} = (req as any).body;
+    if(!name || !email) {
+        return res.status(400).json({message: 'Name and Email are required'});
+    }
+
+    let user = await User.findOne({where: {email}});
+    if(user) {
+        return res.status(400).json({message: 'User already exists'});
+    }
+    user = await User.create({
+        name,
+        email
+
+    })
+
+    res.status(201).json(user);
+}
+

@@ -20,7 +20,7 @@ dotenv.config();
 
 
         new CronJob(
-            '28 21 * * * *', () => {
+            '0 8 * * * *', () => {
                 runFetchNewsJob().catch(console.error);
             },
             null,

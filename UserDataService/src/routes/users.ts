@@ -4,6 +4,8 @@ import authen from '../middleware/jwtauth.js';
 
 const router: Router = express.Router();
 
+router.post('/users', ctl.addUser as RequestHandler);
+
 // Cast authentication middleware to RequestHandler
 router.use(authen as RequestHandler);
 
